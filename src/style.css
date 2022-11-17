@@ -1,0 +1,280 @@
+/* Primary */
+
+/* - Orange: hsl(25, 97%, 53%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%) */
+
+/*=============================================
+=          Mobile Styles Section (375px)      =
+=============================================*/
+
+/*----------  Rating Page Styles  ----------*/
+
+/* APP CONTAINER & PAGE */
+.thePage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.appContainer {
+  min-width: 50vh;
+  background-image: linear-gradient(
+    180deg,
+    hsl(213, 19%, 18%),
+    hsl(213, 19%, 18%, 0.5)
+  );
+  border-radius: 15px;
+  max-height: 48vh;
+}
+
+/* CONTENT CONTAINER */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  gap: 1em;
+}
+
+/* STAR ICON */
+.starContainer {
+  margin-top: 0.938em;
+  display: flex;
+  background-color: hsl(216, 12%, 54%, 0.1);
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+}
+
+.starIcon {
+  margin: auto;
+  height: 0.78em;
+}
+
+/* HEADERS */
+.ratingHeading,
+.thanksHeading {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+/* RATING TEXT */
+.ratingText,
+.thanksText {
+  font-family: "Overpass", sans-serif;
+  color: hsl(217, 12%, 63%, 0.8);
+  font-size: 0.938rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* NUMBERS */
+.numberBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.numberSelector {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Overpass", sans-serif;
+  color: hsl(0, 1%, 100%, 0.7);
+  background-color: hsl(216, 12%, 54%, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6em 0.9em;
+  border:none;
+}
+
+.numberSelector:hover {
+  background: hsl(25, 97%, 53%);
+  border: 0 solid hsl(25, 97%, 53%);
+}
+
+.numberSelector:focus {
+  background: hsl(217, 12%, 63%);
+  border: 1px solid hsl(217, 12%, 63%);
+}
+
+/* SUBMIT BUTTON */
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5em;
+}
+
+.submitBtn {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 1%, 100%, 0.7);
+  background: hsl(25, 97%, 53%);
+  border: 0.313em solid hsl(25, 97%, 53%);
+  border-radius: 25px;
+  font-size: 1rem;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+}
+
+.submitBtn:active {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 1%, 100%);
+  border: 0.313em solid hsl(0, 1%, 100%);
+}
+
+/*----------  Thank You Page Styles  ---------*/
+
+/* APP CONTAINER */
+.thankYouAppContainer {
+  min-height: 55vh;
+}
+
+/* HEADERS */
+.thanksHeading,
+.thanksText {
+  align-self: center;
+  text-align: center;
+}
+
+.thanksHeading {
+  font-size: 1.5625rem;
+  margin-top: 0.5em;
+}
+
+/* IMAGE */
+.imageContainer {
+  margin-top: 1.563em;
+  text-align: center;
+}
+
+.thankYouImage {
+  height: 6.5em;
+}
+
+/* PAGE TEXT */
+.confirmationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.confirmationText {
+  font-family: "Overpass", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(25, 97%, 53%, 0.7);
+  background-color: hsl(216, 12%, 54%, 0.2);
+  border-radius: 15px;
+  padding: 0.375em 0.5em;
+}
+
+.thanksText {
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 0.625em;
+  padding-bottom: 2em;
+}
+
+/*=====  End of Mobile Styles Section  ======*/
+
+/*=============================================
+=          Media Queries Styles Section       =
+=============================================*/
+
+@media (min-width: 360px) {
+  .appContainer {
+    max-width: 350px;
+    min-height: 330px;
+  }
+
+  .thankYouAppContainer {
+    padding: 0.1em;
+    min-height: 55vh;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .appContainer {
+    align-items: center;
+    max-width: 350px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+ .appContainer {
+  margin: 0;
+  min-width: 30vh;
+ }
+ 
+  .contentContainer {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 820px) {
+  .appContainer {
+    max-width: 350px;
+    max-height: 300px;
+  }
+
+  .starContainer {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+  }
+
+  .starIcon {
+    height: 0.6em;
+  }
+}
+@media (min-width: 1440px) {
+  .appContainer {
+    min-width: 350px;
+    max-height: 330px;
+  }
+
+  .starContainer {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+  }
+
+  .starIcon {
+    height: 1em;
+  }
+
+  .contentContainer {
+    padding: 0 0.625em;
+  }
+
+  .numberBar {
+    padding: 0 0.3125em;
+  }
+
+  .submitBtn {
+    width: 95%;
+  }
+
+  .thankYouAppContainer {
+    padding: 0.625em;
+  }
+}
+
+/*==  End of Media Queries Styles Section ==*/
